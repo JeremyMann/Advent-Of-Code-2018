@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 
 namespace AOC2018
 {
-    public static class Day2
+    public class Day2 : DayBase
     {
-        public static int Part1(string input)
+        public override string Part1(string input)
         {
             var boxIds = GetBoxIds(input);
-            return boxIds.IdsWithDoubleCharMatches.Count * boxIds.IdsWithTripleCharMatches.Count;
+            return (boxIds.IdsWithDoubleCharMatches.Count * boxIds.IdsWithTripleCharMatches.Count).ToString();
         }
 
-        public static string Part2(string input)
+        public override string Part2(string input)
         {
             var sourceList = new List<string>();
             var compareList = new List<string>();
@@ -28,7 +25,7 @@ namespace AOC2018
                     compareList.Add(match);
 
             if (compareList.Count != 2)
-                return $"Problem: Found {compareList.Count} box matches.";
+                return $"Problem: Found {compareList.Count} box matches! I should have only found 2.";
 
             var boxA = compareList[0];
             var boxB = compareList[1];
@@ -40,25 +37,6 @@ namespace AOC2018
 
             return string.Join(string.Empty, list.ToArray());
         }
-    
-        public static void Run()
-        {
-            Console.WriteLine();
-            var day = MethodBase.GetCurrentMethod().DeclaringType.Name;
-            Console.WriteLine($"Answers for: {day}");
-            try
-            {
-                var input = File.ReadAllText($"{day}.txt");
-                Console.WriteLine($"{nameof(Part1)}: {Part1(input)}");
-                Console.WriteLine($"{nameof(Part2)}: {Part2(input)}");
-            }
-            catch (FileNotFoundException)
-            {
-                Console.WriteLine("Could not find input file!");
-            }
-        }
-
-        #region Helpers
 
         private static Boxes GetBoxIds(string input)
         {
@@ -76,10 +54,6 @@ namespace AOC2018
             return new Boxes(idMatchesWithDoubles, idMatchesWithTriples);
         }
 
-        #endregion
-
-        #region Objects
-
         public class Boxes
         {
             public List<string> IdsWithDoubleCharMatches;
@@ -91,7 +65,5 @@ namespace AOC2018
                 IdsWithTripleCharMatches = triples;
             }
         }
-
-        #endregion
     }
 }
