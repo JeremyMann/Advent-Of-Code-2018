@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AOC2018
+﻿namespace AOC2018
 {
-    class Literals
+    internal class Literals
     {
+        public const string BrowserSessionId = "BrowserSessionId";
         public static readonly string[] NewLineSeparators = {"\r\n", "\r", "\n"};
     }
 }

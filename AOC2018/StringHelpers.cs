@@ -6,7 +6,7 @@ namespace AOC2018
     public static class StringHelpers
     {
         /// <summary>
-        /// Creates an array of integers from a multiline text input.
+        ///     Creates an array of integers from a multiline text input.
         /// </summary>
         /// <param name="input">Multiline text file containing integers</param>
         /// <returns></returns>
@@ -16,7 +16,7 @@ namespace AOC2018
         }
 
         /// <summary>
-        /// Compares two strings to see if they contain the number of differences specified.
+        ///     Compares two strings to see if they contain the number of differences specified.
         /// </summary>
         /// <param name="a">Origin String</param>
         /// <param name="b">Comparison String</param>

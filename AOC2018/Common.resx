@@ -117,16 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Could_not_find_input_file" xml:space="preserve">
-    <value>Could not find input file!</value>
+  <data name="Error_Could_Not_Find_Input_file" xml:space="preserve">
+    <value>Could not find or retrieve input file!</value>
   </data>
   <data name="AnswersForDay" xml:space="preserve">
-    <value>###### Answers for: Day {0} ######</value>
+    <value>###### Answers for: Day {0} ########</value>
   </data>
-  <data name="Part_1_Response" xml:space="preserve">
-    <value>{0}: {1}</value>
-  </data>
-  <data name="Part_2_Response" xml:space="preserve">
+  <data name="Part_Response" xml:space="preserve">
     <value>{0}: {1}</value>
   </data>
   <data name="Program_Main_Press__Enter__to_exit" xml:space="preserve">
@@ -142,12 +139,33 @@
     <value>Running all days</value>
   </data>
   <data name="Error_CouldNotRunDay" xml:space="preserve">
-    <value>Could not run Day{0}</value>
+    <value>Day {0} is not setup and could not be run.</value>
   </data>
   <data name="ChoseADay" xml:space="preserve">
-    <value>Choose a day to run or press any other key to run all days</value>
+    <value>Please choose a day between 1 and {0} or use 'A' key to run all days [Any other key to exit].</value>
   </data>
   <data name="Error_ObjectNotFound" xml:space="preserve">
     <value>Object not found</value>
+  </data>
+  <data name="Notice_NumberOfDaysReleased" xml:space="preserve">
+    <value>There have been {0} days released.</value>
+  </data>
+  <data name="Error_InvalidDaySelected" xml:space="preserve">
+    <value>Invalid Day selected.</value>
+  </data>
+  <data name="Notice_DownloadingInputFile" xml:space="preserve">
+    <value>Could not find input file for day {0}. Attempting to download...</value>
+  </data>
+  <data name="Notice_Success" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="Notice_Complete" xml:space="preserve">
+    <value>Finished.</value>
+  </data>
+  <data name="LineSeperator" xml:space="preserve">
+    <value>##################################</value>
+  </data>
+  <data name="Notice_RunningDayX" xml:space="preserve">
+    <value>Running Day {0}</value>
   </data>
 </root>

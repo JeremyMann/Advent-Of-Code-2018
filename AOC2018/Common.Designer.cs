@@ -61,7 +61,7 @@ namespace AOC2018 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ###### Answers for: Day {0} ######.
+        ///   Looks up a localized string similar to ###### Answers for: Day {0} ########.
         /// </summary>
         internal static string AnswersForDay {
             get {
@@ -70,7 +70,7 @@ namespace AOC2018 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose a day to run or press any other key to run all days.
+        ///   Looks up a localized string similar to Please choose a day between 1 and {0} or use &apos;A&apos; key to run all days [Any other key to exit]..
         /// </summary>
         internal static string ChoseADay {
             get {
@@ -79,20 +79,29 @@ namespace AOC2018 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not find input file!.
+        ///   Looks up a localized string similar to Could not find or retrieve input file!.
         /// </summary>
-        internal static string Could_not_find_input_file {
+        internal static string Error_Could_Not_Find_Input_file {
             get {
-                return ResourceManager.GetString("Could_not_find_input_file", resourceCulture);
+                return ResourceManager.GetString("Error_Could_Not_Find_Input_file", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not run Day{0}.
+        ///   Looks up a localized string similar to Day {0} is not setup and could not be run..
         /// </summary>
         internal static string Error_CouldNotRunDay {
             get {
                 return ResourceManager.GetString("Error_CouldNotRunDay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Day selected..
+        /// </summary>
+        internal static string Error_InvalidDaySelected {
+            get {
+                return ResourceManager.GetString("Error_InvalidDaySelected", resourceCulture);
             }
         }
         
@@ -115,20 +124,65 @@ namespace AOC2018 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0}: {1}.
+        ///   Looks up a localized string similar to ##################################.
         /// </summary>
-        internal static string Part_1_Response {
+        internal static string LineSeperator {
             get {
-                return ResourceManager.GetString("Part_1_Response", resourceCulture);
+                return ResourceManager.GetString("LineSeperator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finished..
+        /// </summary>
+        internal static string Notice_Complete {
+            get {
+                return ResourceManager.GetString("Notice_Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find input file for day {0}. Attempting to download....
+        /// </summary>
+        internal static string Notice_DownloadingInputFile {
+            get {
+                return ResourceManager.GetString("Notice_DownloadingInputFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There have been {0} days released..
+        /// </summary>
+        internal static string Notice_NumberOfDaysReleased {
+            get {
+                return ResourceManager.GetString("Notice_NumberOfDaysReleased", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Running Day {0}.
+        /// </summary>
+        internal static string Notice_RunningDayX {
+            get {
+                return ResourceManager.GetString("Notice_RunningDayX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Success!.
+        /// </summary>
+        internal static string Notice_Success {
+            get {
+                return ResourceManager.GetString("Notice_Success", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to {0}: {1}.
         /// </summary>
-        internal static string Part_2_Response {
+        internal static string Part_Response {
             get {
-                return ResourceManager.GetString("Part_2_Response", resourceCulture);
+                return ResourceManager.GetString("Part_Response", resourceCulture);
             }
         }
         
