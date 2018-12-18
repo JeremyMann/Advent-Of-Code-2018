@@ -147,4 +147,7 @@
   <data name="ChoseADay" xml:space="preserve">
     <value>Choose a day to run or press any other key to run all days</value>
   </data>
+  <data name="Error_ObjectNotFound" xml:space="preserve">
+    <value>Object not found</value>
+  </data>
 </root>

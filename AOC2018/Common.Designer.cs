@@ -97,6 +97,15 @@ namespace AOC2018 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Object not found.
+        /// </summary>
+        internal static string Error_ObjectNotFound {
+            get {
+                return ResourceManager.GetString("Error_ObjectNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press [Enter] to exit.
         /// </summary>
         internal static string ExitNotice {

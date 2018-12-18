@@ -1,9 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AOC2018
 {
     public class Day3 : DayBase
     {
+        //Claim canvas field value holder.
+        private int[,] _canvas;
+
         public override string Part1(string claims)
         {
             var santaFabric = new Dictionary<int, Dictionary<int, int>>();
@@ -47,7 +52,34 @@ namespace AOC2018
 
         public override string Part2(string input)
         {
-            return null;
+            var claims = input.Split(Literals.NewLineSeparators, StringSplitOptions.None).Select(x => new Claim(x)).ToArray();
+            FillCanvas(1000, claims);
+            //Begin Iterative mapping of the claims.
+            foreach (var claim in claims)
+            {
+                for (var x = claim.LeftEdgeSpan; x < claim.LeftEdgeSpan + claim.Width; x++)
+                for (var y = claim.TopEdgeSpan; y < claim.TopEdgeSpan + claim.Height; y++)
+                    if (_canvas[x, y] != 1)
+                        goto FAILED;
+                return claim.Id.ToString();
+                FAILED: ;
+            }
+
+            throw new Exception(Common.Error_ObjectNotFound);
+        }
+
+        private void FillCanvas(int size, IEnumerable<Claim> papers)
+        {
+            //create canvas
+            _canvas = new int[size, size];
+
+            //check each paper
+            foreach (var claim in papers)
+                //draw each paper
+                for (var x = claim.LeftEdgeSpan; x < claim.LeftEdgeSpan + claim.Width; x++)
+                for (var y = claim.TopEdgeSpan; y < claim.TopEdgeSpan + claim.Height; y++)
+                    //increment for how many papers are on this position
+                    _canvas[x, y]++;
         }
 
         public class Claim
